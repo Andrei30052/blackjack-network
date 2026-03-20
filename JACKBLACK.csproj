@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECB7AD69-44B8-4413-A51E-E8288215D900}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JACKBLACK</RootNamespace>
+    <AssemblyName>JACKBLACK</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Carte.cs" />
+    <Compile Include="Dealer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Conectare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Conectare.Designer.cs">
+      <DependentUpon>Form_Conectare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Server.Designer.cs">
+      <DependentUpon>Form_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Joc.cs" />
+    <Compile Include="Jucator.cs" />
+    <Compile Include="Pachet.cs" />
+    <Compile Include="Participant.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Conectare.resx">
+      <DependentUpon>Form_Conectare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Server.resx">
+      <DependentUpon>Form_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dama_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rege_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dama_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dama_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dama_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rege_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rege_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rege_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valet_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valet_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valet_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valet_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As_Romb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As_Inima_Rosie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As_Trefla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_Inima_Neagra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpateCarte.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards-prepared-poker-night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards-prepared-poker-night1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-01-08 175753.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-01-08 1757531.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-01-08 1757532.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PSF_TECMOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-01-08 1757533.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
